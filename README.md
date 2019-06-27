@@ -14,13 +14,10 @@
 ## Notes
 
 - Had issues setting up project because it initialized with 2.8.16 which supports TS 2.8, I needed to adjust and include package-lock file to lower TS version requirement to 2.1
-- Following components and test cases I wasn't able to finish due to time constraints
-  - Service spec
-  - Results spec
-  - App spec
-  - Reducer spec
-  - Mock e2e data test case
-  - Mock e2e data loading test case
+- Following test specs were to created/finished due to time constraints
+  - **Services:** Service spec, Reducer spec
+  - **Components:** Results spec, App spec
+  - **E2E:** Mock e2e data test case, Mock e2e data test case
 
 ## Task
 
