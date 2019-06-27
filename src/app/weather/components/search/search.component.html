@@ -1,0 +1,33 @@
+<form
+  class="form-inline mb-5"
+  [formGroup]="searchFormGroup"
+  (ngSubmit)="searchCity()"
+>
+  <div class="form-group col-8 pl-0">
+    <input
+      class="form-control mt-3 col"
+      id="city"
+      name="city"
+      placeholder="City"
+      type="text"
+      required
+      formControlName="city"
+      [attr.data-testid]="'search-component-input'"
+    />
+  </div>
+  <button
+    class="btn-search btn btn-primary mt-3 col-4"
+    type="submit"
+    [disabled]="isSubmitDisabled"
+    [attr.data-testid]="'search-component-submit'"
+  >
+    {{ loading ? "Please wait..." : "Search" }}
+  </button>
+</form>
+<!-- Error Alert -->
+<div class="alert alert-danger alert-dismissible fade show" *ngIf="error">
+  <strong>Error!</strong>
+  <span [attr.data-testid]="'search-component-error-message'">
+    {{ error?.error?.message }}
+  </span>
+</div>
